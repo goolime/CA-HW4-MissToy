@@ -1,0 +1,42 @@
+header, footer {
+    padding: .5em 1em;
+
+    position: sticky;
+    display :flex;
+    align-items: center;
+    gap:2em;
+}
+
+main{
+    min-height: 100%;
+}
+
+footer{
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+header{
+    justify-content: space-between;
+    top: 0;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1.1rem 1fr 1.1rem;
+}
+
+.main-layout > * {
+    grid-column: 2;
+}
+
+.main-layout .full {
+    grid-column: 1/-1;
+}
+
+.container {
+    max-width: 800px;
+    padding: 1em;
+    margin: auto;
+}

@@ -1,0 +1,37 @@
+.toys-list{
+    display: flex;
+    flex-flow: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.toy-preview{
+    background-color: var(--secondary);
+    padding: 0.5rem;
+    border: 0.5rem solid var(--accent);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.toy-preview-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toy-preview img{
+    width: 24px;
+    height: 24px;
+    margin: 6px;
+    transition: 0.5s;
+}
+
+.toy-preview img:hover{
+    margin: 0px;
+    width: 30px;
+    height: 30px;
+}

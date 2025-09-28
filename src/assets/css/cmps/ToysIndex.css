@@ -1,0 +1,13 @@
+.toys-index-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: var(--secondary);
+    margin: 1rem 0;
+
+    border: 0.5rem solid var(--accent);
+    border-radius: 8px;
+}   
+

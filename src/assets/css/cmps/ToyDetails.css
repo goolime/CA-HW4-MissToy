@@ -1,0 +1,61 @@
+.toy-edit,
+.toy-details{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.toy-edit{
+    flex-direction: column;
+}
+
+.toy-edit-data,
+.toy-details-data{
+    padding: 2rem;
+    margin: 1rem;
+    background-color: var(--secondary);
+    border: 0.5rem solid var(--accent);;
+    border-radius: 8px;
+}
+
+.toy-details-navigation img{
+    height: 40px;
+    width: 40px;
+    transition: 0.5s;
+}
+
+.toy-details-navigation img:hover{
+    height: 50px;
+    width: 50px;
+}
+
+.toy-edit-data .labels{
+    margin-top: 0.5rem;
+}
+
+.toy-edit-data .labels,
+.toy-details-data .labels{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.toy-edit-data .labels .label{
+    padding: 0.4rem;
+}
+
+.toy-edit-data .labels .label,
+.toy-details-data .labels .label{
+    display: flex;
+    gap:0.2rem;
+    background-color: var(--gray5);
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    border-radius: 8px;
+}
+
+.toy-edit-data-input{
+    display: flex;
+}
+

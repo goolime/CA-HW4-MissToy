@@ -1,3 +1,6 @@
+header{
+    z-index: 100;
+}
 .app-header {
     padding-block: 1em;
     background-color: var(--primery);

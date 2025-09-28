@@ -25,10 +25,11 @@ function App() {
           <main>
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='/toys' element={<ToysIndex/>} />
+              <Route path='/toys' element={<ToysIndex />} />
+              <Route path='/toys/edit/:toyId?'  element={<ToyEdit />} />
+              <Route path='/toys/add'  element={<ToyEdit />} />
               <Route path='/toys/:toyId' element={<ToyDetails />} />
-              <Route path='/toys/edit/:toyId?' element={<ToyEdit />} />
-              <Route path='/about'element={<About/>} />
+              <Route path='/about' element={<About />} />
             </Routes>
           </main>
           <AppFooter />

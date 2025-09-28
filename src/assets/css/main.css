@@ -6,4 +6,14 @@
 @import "base/base.css";
 @import "base/layouts.css";
 
+/* cmps */
 @import "cmps/AppHeader.css";
+@import "cmps/ToysList.css";
+@import "cmps/Tooltip.css";
+@import "cmps/usr-msg.css";
+@import "cmps/Loading.css";
+@import "cmps/ToyDetails.css";
+@import "cmps/Slider.css";
+@import "cmps/ToysFilter.css";
+@import "cmps/ToysOrderBy.css";
+@import "cmps/ToysIndex.css";

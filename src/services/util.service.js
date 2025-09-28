@@ -44,17 +44,45 @@ function loadFromStorage(key) {
     return (data) ? JSON.parse(data) : undefined
 }
 
-function animateCSS(el, animation='bounce') {
+export function animateCSS(el, animation, options = {}) {
+    
+    const { isRemoveClass = true } = options
+
     const prefix = 'animate__'
     return new Promise((resolve, reject) => {
         const animationName = `${prefix}${animation}`
         el.classList.add(`${prefix}animated`, animationName)
+
         function handleAnimationEnd(event) {
             event.stopPropagation()
-            el.classList.remove(`${prefix}animated`, animationName)
+            if (isRemoveClass) el.classList.remove(`${prefix}animated`, animationName)
             resolve('Animation ended')
         }
 
         el.addEventListener('animationend', handleAnimationEnd, { once: true })
     })
+}
+
+
+export function debounce(func, delay) {
+    let timeoutId
+
+    return (...args) => {
+        clearTimeout(timeoutId)
+        timeoutId = setTimeout(() => {
+            func(...args)
+        }, delay)
+    }
+}
+
+
+export function getExistingProperties(obj) {
+    const truthyObj = {}
+    for (const key in obj) {
+        const val = obj[key]
+        if (val || typeof val === 'boolean') {
+            truthyObj[key] = val
+        }
+    }
+    return truthyObj
 }

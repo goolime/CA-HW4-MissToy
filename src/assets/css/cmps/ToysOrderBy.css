@@ -1,0 +1,37 @@
+.toys-order-by {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    width:98%
+}
+
+.toys-order-by .order-by-select{
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.toys-order-by .order-by-select select{
+    padding: 0.4rem;
+    border-radius: 8px;
+    border: 1px solid var(--gray7);
+    background-color: var(--gray4);
+    color: var(--gray7);
+}
+
+.toys-order-by .order-by-select select{
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+.toys-order-by img{
+    width: 24px;
+    height: 24px;
+    transition: 0.5s;
+    margin-right: 1rem;
+}
+.toys-order-by img:hover{
+    width: 30px;
+    height: 30px;
+}

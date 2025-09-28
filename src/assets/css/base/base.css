@@ -10,6 +10,10 @@ body {
   color: var(--text);
 }
 
+app {
+  background-color: var(--background);
+}
+
 h1,
 h2{
     font-family: "Fontdiner Swanky", serif;
@@ -59,4 +63,24 @@ object {
 .done {
   text-decoration: line-through;
   font-style: italic;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--secondary);
+  margin: 0.5em;
+	border: 0;
+	padding: 0.5em 0.8em;
+	border-radius: 4px;
+}
+
+button:hover {
+	background-color: var(--primery);
+	color: var(--gray1);
+	transition: 0.3s;
+}
+
+button:disabled{
+  background-color: var(--gray3);
+  color: var(--gray5);
 }

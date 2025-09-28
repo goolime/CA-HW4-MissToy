@@ -1,11 +1,24 @@
 import { toysService } from "../../services/toys.service.js";
 import { store } from "../store.js";
-import { SET_TOYS, REMOVE_TOY, EDIT_TOY , ADD_TOY , SET_FILTER } from './toys.reducer.js'
+import { SET_TOYS, REMOVE_TOY, EDIT_TOY , ADD_TOY , SET_FILTER, SET_ORDER, SET_LOADING} from './toys.reducer.js'
+
+
+export function setLoading(isLoading){
+    try{
+        store.dispatch({ type: SET_LOADING, isLoading })
+    }
+    catch(err){
+        console.log('having issue with setting loading state:', err )
+        throw err
+    }
+}
 
 export async function loadToys(){
     try {
-        const filterBy = store.getState().toysModule.filterBy
-        store.dispatch({type: SET_TOYS, toys: await toysService.query(filterBy)})
+        const storeState = store.getState()
+        const filterBy = storeState.toysModule.filterBy
+        const orderBy = storeState.toysModule.orderBy
+        store.dispatch({type: SET_TOYS, toys: await toysService.query(filterBy, orderBy)})
     }
     catch(err){
         console.log('having issue with loading toys:', err )
@@ -40,6 +53,16 @@ export async function setFilterBy(filterBy){
     }
     catch(err){
         console.log('having issue with setting the filter:', err )
+        throw err
+    }
+}
+
+export async function setOrderBy(orderBy){
+    try{
+        store.dispatch({ type: SET_ORDER, orderBy })
+    }
+    catch(err){
+        console.log('having issue with setting the order:', err )
         throw err
     }
 }

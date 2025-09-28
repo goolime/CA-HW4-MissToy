@@ -1,25 +1,16 @@
-header, footer {
-    padding: .5em 1em;
-
-    position: sticky;
-    display :flex;
-    align-items: center;
-    gap:2em;
+.app {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
-main{
-    min-height: 100%;
+header {
+  min-height: 50px;
 }
 
-footer{
-    position:absolute;
-    width: 100%;
-    bottom: 0;
-}
-
-header{
-    justify-content: space-between;
-    top: 0;
+footer {
+  min-height: 50px;
 }
 
 .main-layout {

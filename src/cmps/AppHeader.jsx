@@ -1,4 +1,5 @@
 import { NavLink } from "react-router"
+import { UserInteraction } from "./UserInteraction.jsx"
 
 export function AppHeader() {
 
@@ -7,7 +8,6 @@ export function AppHeader() {
         <header className="app-header full main-layout">
             <section className="header-container">
                 <h1>Miss-Toy</h1>
-
                 <nav className="app-nav">
                     <NavLink to="/" >Home</NavLink>
                     <NavLink to="/toys" >Toys</NavLink>
@@ -15,5 +15,6 @@ export function AppHeader() {
                 </nav>
             </section>
         </header>
+        <UserInteraction />
         </>
 }
